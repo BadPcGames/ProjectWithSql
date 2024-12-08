@@ -1,0 +1,36 @@
+﻿
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<h1>Change Blog</h1>
+
+<table class="table">
+
+    <form asp-action="Create" method="post">
+        <h1>Name</h1>
+        <input type="text" name="Name" value="" />
+        <h1>Description</h1>
+        <input type="text" name="Description" value="" />
+        <h1>Theme</h1>
+        <select id="themeSelect" name="theme">
+        </select>
+        <input type="submit"/>
+        </form>
+</table>
+
+<script>
+    $.ajax({
+        url: '@Url.Action("GetThemes", "Blogs")', 
+        method: 'GET',
+        success: function (data) {
+            console.log(data); 
+            data.forEach(function (theme) {
+                $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
+            });
+        },
+        error: function (error) {
+            console.log("Ошибка при загрузке тем: ", error);
+        }
+    });
+</script>
+
