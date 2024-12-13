@@ -5,6 +5,7 @@ using System.Diagnostics;
 using WebApplication1.DbModels;
 using WebApplication1.Models;
 using System.Linq;
+using System.Text;
 
 public class PostsController : Controller
 {
@@ -45,155 +46,45 @@ public class PostsController : Controller
     // GET: Blogs/Create/5
     public IActionResult Create(int blogId)
     {
-        return View(blogId);
+        var model = new Post
+        {
+            BlogId = blogId
+        };
+        return View(model);
     }
 
-    // POST: Blogs/Create/5
     [HttpPost]
-    public async Task<IActionResult> Create(int blogId, [Bind("Id,Title,CreatedAt,Game")] Post post)
+    public async Task<IActionResult> Create(int blogId, [Bind("Title,Game")] Post post, List<Post_ContentViewModel> contents)
     {
-        if (!ModelState.IsValid)
-        {
-            ViewBag.BlogId = blogId;
-            return View(post);
-        }
-
-        post.CreatedAt = DateTime.Now;
         post.BlogId = blogId;
+        post.CreatedAt = DateTime.Now;
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
+
+        if (contents != null)
+        {
+            foreach (var content in contents)
+            {
+                var contentData = content.ContentType switch
+                {
+                    "Text" => Encoding.UTF8.GetBytes(content.Content),
+                    _ => content.FormFile != null ? await GetFileBytes(content.FormFile) : null
+                };
+
+                _context.Post_Contents.Add(new Post_Content
+                {
+                    PostId = post.Id,
+                    ContentType = content.ContentType,
+                    Content = contentData,
+                    Position = content.Position
+                });
+            }
+
+            await _context.SaveChangesAsync();
+        }
+
         return RedirectToAction("Index", new { id = blogId });
     }
-
-
-    //var existingContents = await _context.Post_Contents
-    //    .Where(pc => pc.PostId == model.Id)
-    //    .ToListAsync();
-
-    //_context.Post_Contents.RemoveRange(existingContents);
-
-    //foreach (var content in model.Contents)
-    //{
-    //    content.PostId = model.Id;
-    //    _context.Post_Contents.Add(content);
-    //}
-
-    //// POST: Blogs/Create
-    //[HttpPost]
-    //[ValidateAntiForgeryToken]
-    //public async Task<IActionResult> Create([Bind("Id,Name,Description,Theme,AuthorId")] Blog blog)
-    //{
-    //    if (ModelState.IsValid)
-    //    {
-    //        // TODO: поменять на другой автор айди
-    //        blog.AuthorId = 1;
-    //        _context.Add(blog);
-    //        await _context.SaveChangesAsync();
-    //        return RedirectToAction(nameof(Index));
-    //    }
-    //    return View(blog);
-    //}
-
-    //// GET: Blogs/Edit/5
-    //public async Task<IActionResult> Edit(int? id)
-    //{
-    //    if (id == null || _context.Blogs == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    var blog = await _context.Blogs.FindAsync(id);
-    //    if (blog == null)
-    //    {
-    //        return NotFound();
-    //    }
-    //    return View(blog);
-    //}
-
-    //// POST: Blogs/Edit/5
-    //[HttpPost]
-    //[ValidateAntiForgeryToken]
-    //public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Theme")] Blog blog)
-    //{
-    //    if (id != blog.Id)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    if (ModelState.IsValid)
-    //    {
-    //        try
-    //        {
-    //            var existingBlog = await _context.Blogs.FindAsync(id);
-    //            if (existingBlog == null)
-    //            {
-    //                return NotFound();
-    //            }
-
-    //            existingBlog.Name = blog.Name;
-    //            existingBlog.Description = blog.Description;
-    //            existingBlog.Theme = blog.Theme;
-
-    //            _context.Update(existingBlog);
-    //            await _context.SaveChangesAsync();
-    //        }
-    //        catch (DbUpdateConcurrencyException)
-    //        {
-    //            if (!BlogExists(blog.Id))
-    //            {
-    //                return NotFound();
-    //            }
-    //            else
-    //            {
-    //                throw;
-    //            }
-    //        }
-    //        return RedirectToAction(nameof(Index));
-    //    }
-    //    return View(blog);
-    //}
-
-    //// GET: Blogs/Delete/5
-    //public async Task<IActionResult> Delete(int? id)
-    //{
-    //    if (id == null || _context.Blogs == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    var blog = await _context.Blogs
-    //        .FirstOrDefaultAsync(m => m.Id == id);
-    //    if (blog == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    return View(blog);
-    //}
-
-    //// POST: Blogs/Delete/5
-    //[HttpPost, ActionName("Delete")]
-    //[ValidateAntiForgeryToken]
-    //public async Task<IActionResult> DeleteConfirmed(int id)
-    //{
-    //    if (_context.Blogs == null)
-    //    {
-    //        return Problem("Entity set 'AppDbContext.Blogs'  is null.");
-    //    }
-    //    var blog = await _context.Blogs.FindAsync(id);
-    //    if (blog != null)
-    //    {
-    //        _context.Blogs.Remove(blog);
-    //    }
-
-    //    await _context.SaveChangesAsync();
-    //    return RedirectToAction(nameof(Index));
-    //}
-
-    //private bool BlogExists(int id)
-    //{
-    //    return _context.Blogs.Any(e => e.Id == id);
-    //}
 
     [HttpGet]
     public async Task<IActionResult> GetGames()
@@ -201,4 +92,11 @@ public class PostsController : Controller
         var games = await _context.Games.ToListAsync();
         return Json(games);
     }
+    private async Task<byte[]> GetFileBytes(IFormFile file)
+    {
+        using var memoryStream = new MemoryStream();
+        await file.CopyToAsync(memoryStream);
+        return memoryStream.ToArray();
+    }
+
 }
