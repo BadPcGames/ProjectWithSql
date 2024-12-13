@@ -1,74 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\",
+  "WorkspaceRootPath": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\postcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\postcontent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\post_content.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\post_content.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\models\\postviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\postviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\views\\blogs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\views\\blogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\blogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\blogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\blogs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\dbmodels\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\theme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -95,25 +107,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PostContent.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\PostContent.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\PostContent.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\PostContent.cs",
-              "RelativeToolTip": "WebApplication1\\DbModels\\PostContent.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAArAAAA",
+              "Title": "PostsController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\PostsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PostsController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\PostsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\PostsController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAuwCgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T08:44:24.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Create.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Create.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:44:46.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Index.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:45:11.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Post_Content.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post_Content.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Post_Content.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post_Content.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\Post_Content.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T18:48:05.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\AppDbContext.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\AppDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\AppDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T10:48:14.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Post.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
               "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Post.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
               "RelativeToolTip": "WebApplication1\\DbModels\\Post.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T18:46:27.132Z",
               "EditorCaption": ""
@@ -121,153 +185,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Index.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T18:45:11.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Edit.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Edit.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Edit.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T18:45:11.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Create.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T18:44:46.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\AppDbContext.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\AppDbContext.cs",
-              "RelativeToolTip": "WebApplication1\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
+              "Title": "PostViewModel.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\PostViewModel.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\PostViewModel.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\PostViewModel.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\PostViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T10:48:14.942Z",
+              "WhenOpened": "2024-12-08T08:25:56.772Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BlogsController.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BlogsController.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\BlogsController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAEwDIAAAAfAAAA",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T10:54:51.788Z",
+              "WhenOpened": "2024-12-06T10:52:41.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Index.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Index.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T10:53:44.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAIAAAABAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-06T10:52:17.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Blog.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
-              "RelativeToolTip": "WebApplication1\\DbModels\\Blog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T18:28:15.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T18:34:26.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T10:50:50.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Edit.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Edit.cshtml",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Edit.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Edit.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-07T18:26:16.212Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "BlogViewModel.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\BlogViewModel.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\BlogViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\BlogViewModel.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\BlogViewModel.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\BlogViewModel.cs",
               "RelativeToolTip": "WebApplication1\\Models\\BlogViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -276,42 +236,131 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\User.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
-              "RelativeToolTip": "WebApplication1\\DbModels\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Index.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T10:53:44.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BlogsController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BlogsController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\BlogsController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwDgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T18:28:37.321Z",
+              "WhenOpened": "2024-12-06T10:54:51.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Create.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:34:26.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Edit.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Edit.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:45:11.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAqAAAA",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Edit.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Edit.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-07T18:26:16.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Game.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Game.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Game.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\Game.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T10:52:41.988Z",
+              "WhenOpened": "2024-12-13T08:10:23.951Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Theme.cs",
-              "DocumentMoniker": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Theme.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Theme.cs",
               "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Theme.cs",
-              "ToolTip": "D:\\\u043F\u043E\u043F\u0456\u0442\u043A\u0438\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Theme.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Theme.cs",
               "RelativeToolTip": "WebApplication1\\DbModels\\Theme.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-07T18:28:32.755Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Blog.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Blog.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\Blog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:28:15.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-06T10:50:50.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\User.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:28:37.321Z"
             }
           ]
         },

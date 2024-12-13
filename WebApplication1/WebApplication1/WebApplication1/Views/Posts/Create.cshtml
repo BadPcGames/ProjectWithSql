@@ -1,36 +1,33 @@
-﻿
+﻿@model int 
+
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<h1>Change Blog</h1>
+<h1>Posts Redactor @Model</h1>
 
-<table class="table">
-
-    <form asp-action="Create" method="post">
-        <h1>Name</h1>
-        <input type="text" name="Name" value="" />
-        <h1>Description</h1>
-        <input type="text" name="Description" value="" />
-        <h1>Theme</h1>
-        <select id="themeSelect" name="theme">
-        </select>
-        <input type="submit"/>
-        </form>
-</table>
+<form asp-action="Create" asp-route-blogId="@Model" method="post">
+    <h1>Name</h1>
+    <input type="text" name="Title" value="" />
+    <h1>Game</h1>
+    <select id="gameSelect" name="Game">
+    </select>
+    <input type="submit" />
+</form>
 
 <script>
-    $.ajax({
-        url: '@Url.Action("GetThemes", "Blogs")', 
-        method: 'GET',
-        success: function (data) {
-            console.log(data); 
-            data.forEach(function (theme) {
-                $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
-            });
-        },
-        error: function (error) {
-            console.log("Ошибка при загрузке тем: ", error);
-        }
+    $(document).ready(function () {
+        $.ajax({
+            url: '@Url.Action("GetGames", "Posts")',
+            method: 'GET',
+            success: function (data) {
+                console.log(data);
+                data.forEach(function (game) {
+                    $("#gameSelect").append(`<option value="${game.gameName}">${game.gameName}</option>`);
+                });
+            },
+            error: function (error) {
+                console.log("Error loading games: ", error);
+            }
+        });
     });
 </script>
-

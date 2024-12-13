@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QaRiK2aN5vM/7/qetXi3d/o4Pbf8noqWD17jVKjhotqgCf1a8K0ctgWDa2y8VbPqFj2EoAKX7sNbbVlgIfLq+g==",
+  "dgSpecHash": "aBx+tBp2nXsnqac9bDTGjSdjE2E9uxP2TXhhTHPsmirwFfsezCtXmuWPmpvzIVYwEOT/OvVyn+U5N2+4zPgAzA==",
   "success": true,
-  "projectFilePath": "D:\\попітки\\curd\\WebApplication1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+  "projectFilePath": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.2\\microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",

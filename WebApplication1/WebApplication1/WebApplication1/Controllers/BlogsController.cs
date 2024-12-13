@@ -19,24 +19,6 @@ public class BlogsController : Controller
         return View(await _context.Blogs.ToListAsync());
     }
 
-    //// GET: Blogs/Details/5
-    //public async Task<IActionResult> Details(int? id)
-    //{
-    //    if (id == null || _context.Blogs == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    var blog = await _context.Blogs
-    //        .FirstOrDefaultAsync(m => m.Id == id);
-    //    if (blog == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    return View(blog);
-    //}
-
     // GET: Blogs/Create
     public IActionResult Create()
     {
@@ -121,39 +103,23 @@ public class BlogsController : Controller
     // GET: Blogs/Delete/5
     public async Task<IActionResult> Delete(int? id)
     {
-        if (id == null || _context.Blogs == null)
+        if (id == null)
         {
             return NotFound();
         }
 
-        var blog = await _context.Blogs
-            .FirstOrDefaultAsync(m => m.Id == id);
+        var blog = await _context.Blogs.FirstOrDefaultAsync(m => m.Id == id);
         if (blog == null)
         {
             return NotFound();
         }
 
-        return View(blog);
-    }
-
-    // POST: Blogs/Delete/5
-    [HttpPost, ActionName("Delete")]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> DeleteConfirmed(int id)
-    {
-        if (_context.Blogs == null)
-        {
-            return Problem("Entity set 'AppDbContext.Blogs'  is null.");
-        }
-        var blog = await _context.Blogs.FindAsync(id);
-        if (blog != null)
-        {
-            _context.Blogs.Remove(blog);
-        }
-
+        _context.Blogs.Remove(blog);
         await _context.SaveChangesAsync();
+
         return RedirectToAction(nameof(Index));
     }
+
 
     private bool BlogExists(int id)
     {
