@@ -1,0 +1,83 @@
+﻿@using WebApplication1.DbModels
+@model IEnumerable<Blog>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .faq{
+            max-width:500px;
+            margin:20px auto;
+        }
+        .faq-item{
+            border:2px solid red;
+            border-radius:5px;
+        }
+        .faq-title{
+            display:block;
+            padding:10px <a href="#"></a>
+
+            color:#fff;
+            cursor:pointer;
+
+            transition: background .2s ease-out;
+        }
+       .faq-title:hover{
+           background-color:lightcoral;
+       }
+       .faq-input{
+           width:0px;
+           height:0px;
+
+           -webkit-appearance:none;
+           appearance:none;
+
+           position:absolute;
+       }
+       .faq-input:checked + .faq-text{
+           display:block;
+       }
+
+       .faq-text{
+           display:none;
+           padding:10px <a href="#"></a>
+           color:#fff;
+           font-size:14px;
+       }
+    </style>
+</head>
+
+<h1>Log in</h1>
+
+<div class="fag">
+
+    <div class="faq-item">
+        <label class="faq-title" for="faq-login">Вхід</label>
+        <input class="faq-input" type="radio" checked="checked"  name="faq" id="faq-login"></input>
+        <div class="faq-text">
+            <form asp-action="Login" method="post">
+                <h1>Email</h1>
+                <input type="text" name="Email" value="" />
+                <h1>Password</h1>
+                <input type="password" name="Password" value="" />
+                <input type="submit" />
+            </form>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <label class="faq-title" for="faq-registr">Реєстрація</label>
+        <input class="faq-input" type="radio" name="faq" id="faq-registr"></input>
+        <div class="faq-text">
+            <form asp-action="Register" method="post">
+                <h1>Name</h1>
+                <input type="text" name="Name" value="" />
+                <h1>Email</h1>
+                <input type="text" name="Email" value="" />
+                <h1>Password</h1>
+                <input type="password" name="Password" value="" />
+                <input type="submit" />
+            </form>
+        </div>
+    </div>
+
+</div>

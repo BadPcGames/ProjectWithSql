@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\git\ProjectWithSql\WebApplication1\WebApplication1\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Blogs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

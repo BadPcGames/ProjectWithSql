@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication1;
 using System.Diagnostics;
 using WebApplication1.DbModels;
+using Microsoft.AspNetCore.Authorization;
 
 public class BlogsController : Controller
 {
@@ -32,7 +33,7 @@ public class BlogsController : Controller
     {
         if (ModelState.IsValid)
         {
-            // TODO: поменять на другой автор айди
+            // TODO 1: поменять на другой автор айди
             blog.AuthorId = 1;
             _context.Add(blog);
             await _context.SaveChangesAsync();
