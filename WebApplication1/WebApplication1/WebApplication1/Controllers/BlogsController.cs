@@ -114,7 +114,16 @@ public class BlogsController : Controller
             return NotFound();
         }
 
+        var postsToDelete = await _context.Posts.Where(m => m.BlogId == id).ToListAsync();
+        foreach (var post in postsToDelete)
+        {
+            var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
+            _context.Post_Contents.RemoveRange(contentsToDelete);
+            _context.Posts.Remove(post);
+        }
+
         _context.Blogs.Remove(blog);
+
         await _context.SaveChangesAsync();
 
         return RedirectToAction(nameof(Index));
