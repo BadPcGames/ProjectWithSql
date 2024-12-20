@@ -43,6 +43,11 @@ namespace WebApplication1.Controllers
                 };
                 _context.Users.Add(user);
                 _context.SaveChanges();
+                Login(new LoginModel()
+                {
+                    Email = model.Email,
+                    Password=model.Password
+                }); 
                 return RedirectToAction("Index", "Home");
             }
             else
