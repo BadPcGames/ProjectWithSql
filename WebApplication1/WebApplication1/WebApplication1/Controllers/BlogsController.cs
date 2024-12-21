@@ -4,6 +4,7 @@ using WebApplication1;
 using System.Diagnostics;
 using WebApplication1.DbModels;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 public class BlogsController : Controller
 {
@@ -15,7 +16,6 @@ public class BlogsController : Controller
     }
 
     // GET: Blogs
-
     [Authorize]
     public async Task<IActionResult> Index()
     {

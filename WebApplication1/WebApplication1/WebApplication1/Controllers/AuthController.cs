@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.Data;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
@@ -58,7 +60,7 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login([Bind("Email,Password")] LoginModel model)
+        public async Task<IActionResult> Login([Bind("Email,Password")] LoginModel model)
         {
 
             if(!_context.Users.Any(m => m.Email == model.Email))
@@ -73,9 +75,31 @@ namespace WebApplication1.Controllers
             {
                 return RedirectToAction("Index");
             }
-            
-            string token = JWTGenareteServices.GenerateJwtToken(user.Id.ToString(),user.Role,_config);
-            HttpContext.Response.Cookies.Append("tasty-cookies", token);
+
+            await SingIn(user);
+
+            return RedirectToAction("Index", "Home");
+
+        }
+
+        private async Task SingIn(User user)
+        {
+            var claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.System,user.Id.ToString()),
+                new Claim(ClaimTypes.Name,user.Name),
+                new Claim(ClaimTypes.Email,user.Email),
+                new Claim(ClaimTypes.Role,user.Role)
+            };
+            var claimsIdentyti = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme,
+                ClaimTypes.Name, ClaimTypes.Role);
+            var claimsPrincipal = new ClaimsPrincipal(claimsIdentyti);
+            await HttpContext.SignInAsync(claimsPrincipal);
+        }
+
+        private async Task<IActionResult> SingOut()
+        {
+            HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
 
