@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\services\\shifrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\shifrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\services\\jwtgenareteservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\services\\jwtgenareteservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\jwtgenareteservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\services\\shifrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\services\\shifrservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ShifrService.cs",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Services\\ShifrService.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Services\\ShifrService.cs",
@@ -65,7 +65,7 @@
               "RelativeDocumentMoniker": "WebApplication1\\Services\\JWTGenareteServices.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Services\\JWTGenareteServices.cs",
               "RelativeToolTip": "WebApplication1\\Services\\JWTGenareteServices.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAqwBsAAAAxAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAYwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T15:19:19.263Z",
               "EditorCaption": ""
@@ -78,9 +78,10 @@
               "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Program.cs",
               "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAswFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T15:00:52.707Z"
+              "WhenOpened": "2024-12-20T15:00:52.707Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -90,22 +91,23 @@
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\AuthController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAA3wCgAAAAwAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAYwE0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T15:00:43.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "BlogsController.cs",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BlogsController.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\BlogsController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowBUAAAAAAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwBgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T15:00:14.201Z"
+              "WhenOpened": "2024-12-20T15:00:14.201Z",
+              "EditorCaption": ""
             }
           ]
         },

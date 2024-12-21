@@ -15,6 +15,8 @@ public class BlogsController : Controller
     }
 
     // GET: Blogs
+
+    [Authorize]
     public async Task<IActionResult> Index()
     {
         return View(await _context.Blogs.ToListAsync());

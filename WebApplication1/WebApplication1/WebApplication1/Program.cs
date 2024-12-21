@@ -28,6 +28,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtIssuer,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
 
@@ -35,7 +38,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             OnMessageReceived = context =>
             {
-                var token = context.Request.Cookies["tastyies"];
+                var token = context.Request.Cookies["tasty-cookies"];
                 if (!string.IsNullOrEmpty(token))
                 {
                     context.Token = token;
@@ -61,7 +64,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-//app.UseMiddleware<JwtCacheMiddleware>();
 
 app.UseAuthentication();
 app.UseAuthorization();
