@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 using WebApplication1.DbModels;
 using WebApplication1.Models;
 using WebApplication1.Services;
@@ -89,7 +90,8 @@ namespace WebApplication1.Controllers
                 new Claim(ClaimTypes.System,user.Id.ToString()),
                 new Claim(ClaimTypes.Name,user.Name),
                 new Claim(ClaimTypes.Email,user.Email),
-                new Claim(ClaimTypes.Role,user.Role)
+                new Claim(ClaimTypes.Role,user.Role),
+                new Claim(ClaimTypes.Actor,Encoding.UTF8.GetString(user.Avatar))
             };
             var claimsIdentyti = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme,
                 ClaimTypes.Name, ClaimTypes.Role);
@@ -97,12 +99,19 @@ namespace WebApplication1.Controllers
             await HttpContext.SignInAsync(claimsPrincipal);
         }
 
-        private async Task<IActionResult> SingOut()
+        public async Task<IActionResult> SingOut()
         {
             HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
+        public int? GetUserId()
+        {
+            if (HttpContext.User.FindFirst(ClaimTypes.System)?.Value!=null)
+            {
+                return int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
+            }
+            return null; 
+        }
 
     }
 }

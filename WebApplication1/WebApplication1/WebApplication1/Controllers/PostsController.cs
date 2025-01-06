@@ -43,7 +43,7 @@ public class PostsController : Controller
         return View(postsForShow);
     }
 
-    // GET: Blogs/Create/5
+    // GET: Posts/Create/5
     public IActionResult Create(int blogId)
     {
         var model = new Post
@@ -53,6 +53,7 @@ public class PostsController : Controller
         return View(model);
     }
 
+    // POST: Posts/Create/5
     [HttpPost]
     public async Task<IActionResult> Create(int blogId, [Bind("Title,Game")] Post post, List<Post_ContentViewModel> contents)
     {
@@ -86,12 +87,15 @@ public class PostsController : Controller
         return RedirectToAction("Index", new { id = blogId });
     }
 
+
     [HttpGet]
     public async Task<IActionResult> GetGames()
     {
         var games = await _context.Games.ToListAsync();
         return Json(games);
     }
+
+
     private async Task<byte[]> GetFileBytes(IFormFile file)
     {
         using var memoryStream = new MemoryStream();

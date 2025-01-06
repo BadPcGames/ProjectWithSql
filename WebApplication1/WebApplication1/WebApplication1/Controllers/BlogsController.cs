@@ -35,8 +35,7 @@ public class BlogsController : Controller
     {
         if (ModelState.IsValid)
         {
-            // TODO 1: поменять на другой автор айди
-            blog.AuthorId = 1;
+            blog.AuthorId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
             _context.Add(blog);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
