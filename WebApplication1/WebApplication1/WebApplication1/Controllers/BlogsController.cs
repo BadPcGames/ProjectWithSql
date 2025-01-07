@@ -19,7 +19,9 @@ public class BlogsController : Controller
     [Authorize]
     public async Task<IActionResult> Index()
     {
-        return View(await _context.Blogs.ToListAsync());
+        var yourBlogs= _context.Blogs.Where(blog=>blog.AuthorId == 
+            int.Parse(HttpContext.User.FindFirst(ClaimTypes.System).Value)).ToList();
+        return View(yourBlogs);
     }
 
     // GET: Blogs/Create
@@ -121,6 +123,10 @@ public class BlogsController : Controller
         {
             var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
             _context.Post_Contents.RemoveRange(contentsToDelete);
+            var reactionsToDelete = _context.Reactions.Where(m => m.PostId == post.Id);
+            _context.Reactions.RemoveRange(reactionsToDelete);
+            var comentsToDelete = _context.Coments.Where(m => m.PostId == post.Id);
+            _context.Coments.RemoveRange(comentsToDelete);
             _context.Posts.Remove(post);
         }
 

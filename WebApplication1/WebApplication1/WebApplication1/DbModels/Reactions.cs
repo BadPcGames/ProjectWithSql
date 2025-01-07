@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public int Value { get; set; }
         public int AuthorId { get; set; }
+        public int PostId { get; set; }
     }
 }

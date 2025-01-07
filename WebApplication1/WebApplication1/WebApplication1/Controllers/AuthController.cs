@@ -37,13 +37,14 @@ namespace WebApplication1.Controllers
 
             if (!_context.Users.Any(m => m.Email == model.Email))
             {
-                User user=new User
+                User user = new User
                 {
-                    Name= model.Name,
-                    Email=model.Email,
-                    PasswordHash=ShifrService.HashPassword(model.Password),
-                    Role="User"
-                };
+                    Name = model.Name,
+                    Email = model.Email,
+                    PasswordHash = ShifrService.HashPassword(model.Password),
+                    Role = "User",
+                    Avatar = new byte[0]
+            };
                 _context.Users.Add(user);
                 _context.SaveChanges();
                 Login(new LoginModel()

@@ -14,6 +14,7 @@ public class AppDbContext : DbContext
     public DbSet<Coments> Coments { get; set; }
     public DbSet<Reactions> Reactions { get; set; }
 
+
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
     }

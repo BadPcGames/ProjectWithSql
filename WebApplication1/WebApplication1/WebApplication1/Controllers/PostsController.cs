@@ -28,7 +28,7 @@ public class PostsController : Controller
                                   .ToListAsync();
         ViewBag.BlogId = id;
 
-        var postsForShow = posts.Select(post => new PostViewModel
+        var postsToShow = posts.Select(post => new PostViewModel
         {
             Id = post.Id,
             Title = post.Title,
@@ -40,8 +40,30 @@ public class PostsController : Controller
             BlogName=_context.Blogs.FirstOrDefault(blog=>blog.Id==post.BlogId)?.Name ?? "Unknown",
             Contents=_context.Post_Contents.Where(postsContents=>postsContents.PostId==post.Id).ToList()
         }).ToList();
-        return View(postsForShow);
+        return View(postsToShow);
     }
+
+    // GET: One Post
+    public async Task<IActionResult> ReadPost(int id)
+    {
+
+        var post = _context.Posts.FirstOrDefault(post => post.Id == id);
+        PostViewModel postToShow = new PostViewModel()
+        {
+            Id = post.Id,
+            Title = post.Title,
+            BlogId = post.BlogId,
+            Game = post.Game,
+            CreateAt = post.CreatedAt,
+            AuthorName = _context.Users.FirstOrDefault(
+                    user => user.Id == _context.Blogs.FirstOrDefault(blog => blog.Id == post.BlogId).AuthorId)?.Name ?? "Unknown",
+            BlogName = _context.Blogs.FirstOrDefault(blog => blog.Id == post.BlogId)?.Name ?? "Unknown",
+            Contents = _context.Post_Contents.Where(postsContents => postsContents.PostId == post.Id).ToList()
+        };
+
+        return View(postToShow);
+    }
+
 
     // GET: Posts/Create/5
     public IActionResult Create(int blogId)
@@ -86,6 +108,33 @@ public class PostsController : Controller
 
         return RedirectToAction("Index", new { id = blogId });
     }
+
+    public async Task<IActionResult> Delete(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var post = await _context.Posts.FirstOrDefaultAsync(m => m.Id == id);
+        if (post == null)
+        {
+            return NotFound();
+        }
+
+        var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
+        _context.Post_Contents.RemoveRange(contentsToDelete);
+        var reactionsToDelete = _context.Reactions.Where(m => m.PostId == post.Id);
+        _context.Reactions.RemoveRange(reactionsToDelete);
+        var comentsToDelete = _context.Coments.Where(m => m.PostId == post.Id);
+        _context.Coments.RemoveRange(comentsToDelete);
+        _context.Posts.Remove(post);
+        
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index","Blogs");
+    }
+
 
 
     [HttpGet]
