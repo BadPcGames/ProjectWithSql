@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wKh8W5y9evMbNKHsrkKVBR4QqjWdgCJMbGB6hHZe43U=",
+  "Hash": "8AXS73KcWJ+ttlecKrDAcdpLFv4Jzmhnfxw9ox6Fwkg=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\images\\images.png",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "images/images.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\images.png"
     },
     {
       "Identity": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",

@@ -37,7 +37,7 @@
                     </ul>
                     <div class="dropdown">
                         <a class="dropdownMenuButton" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img style="width:40px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRODDX326p2qgkC1VI2N1jm1u_Ihb2PAM8MecsWOJfIBSESk_GmadQUf4INIVkBpzvut48&usqp=CAU">
+                            <img style="width:40px" class="rounded-circle" src="./images/images.png">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                         </ul>
@@ -60,6 +60,7 @@
                             <li><a class="nav-link text-dark" href = "/Blogs/Index" > Your Blogs </a></li >
                                 <li><a class="nav-link text-dark" href = "/Auth/SingOut" > Log Out </a></li >
                              `;
+
                          console.log(data);
                     } else {
                         element.innerHTML = '<a class="nav-link text-dark" href="/Auth/Index">Login / Reg</a>';
@@ -74,6 +75,31 @@
             }
         });
     </script>
+
+    <script>
+        $.ajax({
+            url: '@Url.Action("GetUserAvatar", "Auth")',
+            method: 'GET',
+            success: function (data) {
+                const elements = document.getElementsByClassName('dropdownMenuButton');
+                if (elements.length > 0) {
+                    const element = elements[0];
+                    if (data != null) {
+                        element.innerHTML = element.innerHTML = `
+            <img style="width:40px" class="rounded-circle" src="data:image/png;base64,${data}" onerror="console.error('Ошибка загрузки изображения')">
+        `;
+                        console.log(data);
+                    } 
+                } else {
+                    console.error("Элементы с классом 'dropdownMenuButton' не найдены");
+                }
+            },
+            error: function (error) {
+                console.log("Ошибка при получении статуса пользователя: ", error);
+            }
+        });
+    </script>
+
 
 
 

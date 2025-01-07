@@ -1,17 +1,16 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
+using System.IO;
 using System.Security.Claims;
 using System.Text;
-using System.Text.Json;
 using WebApplication1.DbModels;
 using WebApplication1.Models;
 using WebApplication1.Services;
+using MyConvert = WebApplication1.Services.MyConvert;
+
 
 namespace WebApplication1.Controllers
 {
@@ -37,21 +36,25 @@ namespace WebApplication1.Controllers
 
             if (!_context.Users.Any(m => m.Email == model.Email))
             {
-                User user = new User
+                using (var stream = System.IO.File.OpenRead("./wwwroot/images/images.png"))
                 {
-                    Name = model.Name,
-                    Email = model.Email,
-                    PasswordHash = ShifrService.HashPassword(model.Password),
-                    Role = "User",
-                    Avatar = new byte[0]
-            };
-                _context.Users.Add(user);
-                _context.SaveChanges();
-                Login(new LoginModel()
-                {
-                    Email = model.Email,
-                    Password=model.Password
-                }); 
+                    User user = new User
+                    {
+                        Name = model.Name,
+                        Email = model.Email,
+                        PasswordHash = ShifrService.HashPassword(model.Password),
+                        Role = "User",
+                        Avatar = MyConvert.ConvertFileToByteArray(new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name)))
+                    };
+
+                    _context.Users.Add(user);
+                    _context.SaveChanges();
+                    Login(new LoginModel()
+                    {
+                        Email = model.Email,
+                        Password = model.Password
+                    });
+                }
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -91,8 +94,7 @@ namespace WebApplication1.Controllers
                 new Claim(ClaimTypes.System,user.Id.ToString()),
                 new Claim(ClaimTypes.Name,user.Name),
                 new Claim(ClaimTypes.Email,user.Email),
-                new Claim(ClaimTypes.Role,user.Role),
-                new Claim(ClaimTypes.Actor,Encoding.UTF8.GetString(user.Avatar))
+                new Claim(ClaimTypes.Role,user.Role)
             };
             var claimsIdentyti = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme,
                 ClaimTypes.Name, ClaimTypes.Role);
@@ -105,6 +107,8 @@ namespace WebApplication1.Controllers
             HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+
         public int? GetUserId()
         {
             if (HttpContext.User.FindFirst(ClaimTypes.System)?.Value!=null)
@@ -112,6 +116,15 @@ namespace WebApplication1.Controllers
                 return int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
             }
             return null; 
+        }
+
+        public byte[]? GetUserAvatar()
+        {
+            if (_context.Users.First(user=>user.Id==GetUserId()).Avatar != null)
+            {
+                return _context.Users.First(user => user.Id == GetUserId()).Avatar;
+            }
+            return null;
         }
 
     }

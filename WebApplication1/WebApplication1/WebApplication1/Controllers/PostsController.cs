@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1;
-using System.Diagnostics;
 using WebApplication1.DbModels;
 using WebApplication1.Models;
-using System.Linq;
 using System.Text;
+using WebApplication1.Services;
 
 public class PostsController : Controller
 {
@@ -88,12 +87,17 @@ public class PostsController : Controller
         {
             foreach (var content in contents)
             {
-                var contentData = content.ContentType switch
+                var contentData= new byte[0];
+                switch (content.ContentType)
                 {
-                    "Text" => Encoding.UTF8.GetBytes(content.Content),
-                    _ => content.FormFile != null ? await GetFileBytes(content.FormFile) : null
-                };
-
+                    case "Text":
+                        contentData = Encoding.UTF8.GetBytes(content.Content);
+                        break;
+                    default:
+                        contentData = content.FormFile != null ? MyConvert.ConvertFileToByteArray(content.FormFile) : null;
+                        break;
+                }
+               
                 _context.Post_Contents.Add(new Post_Content
                 {
                     PostId = post.Id,
@@ -144,12 +148,5 @@ public class PostsController : Controller
         return Json(games);
     }
 
-
-    private async Task<byte[]> GetFileBytes(IFormFile file)
-    {
-        using var memoryStream = new MemoryStream();
-        await file.CopyToAsync(memoryStream);
-        return memoryStream.ToArray();
-    }
 
 }
