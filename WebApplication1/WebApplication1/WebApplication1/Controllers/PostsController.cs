@@ -126,6 +126,8 @@ public class PostsController : Controller
             return NotFound();
         }
 
+        int blogId = post.BlogId;
+
         var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
         _context.Post_Contents.RemoveRange(contentsToDelete);
         var reactionsToDelete = _context.Reactions.Where(m => m.PostId == post.Id);
@@ -136,7 +138,7 @@ public class PostsController : Controller
         
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Index","Blogs");
+        return RedirectToAction("Index", new { id = blogId });
     }
 
 

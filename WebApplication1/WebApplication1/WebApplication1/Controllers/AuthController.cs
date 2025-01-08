@@ -120,9 +120,12 @@ namespace WebApplication1.Controllers
 
         public byte[]? GetUserAvatar()
         {
-            if (_context.Users.First(user=>user.Id==GetUserId()).Avatar != null)
+            if (GetUserId() != null)
             {
-                return _context.Users.First(user => user.Id == GetUserId()).Avatar;
+                if (_context.Users.First(user => user.Id == GetUserId()).Avatar != null)
+                {
+                    return _context.Users.First(user => user.Id == GetUserId()).Avatar;
+                }
             }
             return null;
         }

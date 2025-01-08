@@ -1,4 +1,5 @@
-﻿@using WebApplication1.DbModels
+﻿@using Microsoft.JSInterop
+@using WebApplication1.DbModels
 @model PostViewModel
 
 <head>
@@ -21,6 +22,7 @@
 
         @foreach (var content in Model.Contents)
         {
+ 
             if (content.ContentType == "Image")
             {
                 var base64Image = Convert.ToBase64String(content.Content);
@@ -31,15 +33,15 @@
             }
             else if (content.ContentType == "Video")
             {
-                var base64Video = Convert.ToBase64String(content.Content);
-                var videoSrc = $"data:video/mp4;base64,{base64Video}"; 
+                var videoSrc = $"data:video/mp4;base64,{Convert.ToBase64String(content.Content)}";
                 <div>
                     <video controls class="video-fluid">
                         <source src="@videoSrc" type="video/mp4" />
-                        Your browser does not support the video tag.
+                        Ваш браузер не поддерживает тег video.
                     </video>
                 </div>
             }
+
             else
             {
                 var textContent = System.Text.Encoding.UTF8.GetString(content.Content);
