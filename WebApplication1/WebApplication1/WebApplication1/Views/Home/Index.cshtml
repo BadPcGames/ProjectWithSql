@@ -97,10 +97,11 @@
                                 var base64Video = Convert.ToBase64String(item.Contents[0].Content);
                                 var videoSrc = $"data:video/mp4;base64,{base64Video}";
                                 <div>
-                                    <video controls class="video-fluid">
-                                        <source src="@videoSrc" type="video/mp4" />
-                                        Your browser does not support the video tag.
-                                    </video>
+                                    <div>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="@videoSrc"></iframe>
+                                        </div>
+                                    </div>
                                 </div>
                             }
                             else

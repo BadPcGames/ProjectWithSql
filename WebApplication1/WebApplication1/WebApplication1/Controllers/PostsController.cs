@@ -5,6 +5,8 @@ using WebApplication1.DbModels;
 using WebApplication1.Models;
 using System.Text;
 using WebApplication1.Services;
+using WebApplication1.Controllers;
+using System.Security.Claims;
 
 public class PostsController : Controller
 {
@@ -27,6 +29,15 @@ public class PostsController : Controller
                                   .ToListAsync();
         ViewBag.BlogId = id;
 
+        if (HttpContext.User.FindFirst(ClaimTypes.System)?.Value != null)
+        {
+            ViewBag.CanChange= int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value) == _context.Blogs.First(blog => blog.Id == id).AuthorId;
+        }
+        else
+        {
+            ViewBag.CanChange=false;
+        }
+
         var postsToShow = posts.Select(post => new PostViewModel
         {
             Id = post.Id,
@@ -39,6 +50,7 @@ public class PostsController : Controller
             BlogName=_context.Blogs.FirstOrDefault(blog=>blog.Id==post.BlogId)?.Name ?? "Unknown",
             Contents=_context.Post_Contents.Where(postsContents=>postsContents.PostId==post.Id).ToList()
         }).ToList();
+
         return View(postsToShow);
     }
 

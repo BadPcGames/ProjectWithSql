@@ -15,15 +15,6 @@ public class BlogsController : Controller
         _context = context;
     }
 
-    // GET: Blogs
-    [Authorize]
-    public async Task<IActionResult> Index()
-    {
-        var yourBlogs= _context.Blogs.Where(blog=>blog.AuthorId == 
-            int.Parse(HttpContext.User.FindFirst(ClaimTypes.System).Value)).ToList();
-        return View(yourBlogs);
-    }
-
     // GET: Blogs/Create
     public IActionResult Create()
     {
@@ -40,7 +31,7 @@ public class BlogsController : Controller
             blog.AuthorId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
             _context.Add(blog);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Profile");
         }
         return View(blog);
     }
@@ -99,7 +90,7 @@ public class BlogsController : Controller
                     throw;
                 }
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Profile");
         }
         return View(blog);
     }
@@ -134,7 +125,7 @@ public class BlogsController : Controller
 
         await _context.SaveChangesAsync();
 
-        return RedirectToAction(nameof(Index));
+        return RedirectToAction("Index","Profile");
     }
 
 
