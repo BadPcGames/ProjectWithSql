@@ -6,6 +6,7 @@ using WebApplication1.Models;
 using System.Text;
 using WebApplication1.Services;
 using System.Security.Claims;
+using Microsoft.Extensions.Hosting;
 
 public class PostsController : Controller
 {
@@ -87,7 +88,7 @@ public class PostsController : Controller
 
     // POST: Posts/Create/5
     [HttpPost]
-    public async Task<IActionResult> Create(int blogId, [Bind("Title,Game")] Post post, List<Post_ContentViewModel> contents)
+    public async Task<IActionResult> Create(int blogId, [Bind("Title,Game")] Post post, List<PostContentViewModel> contents)
     {
         post.BlogId = blogId;
         post.CreatedAt = DateTime.Now;
@@ -124,6 +125,8 @@ public class PostsController : Controller
         return RedirectToAction("Index", new { id = blogId });
     }
 
+    // POST: Posts/Dlete/5
+    [HttpPost]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)
@@ -222,6 +225,47 @@ public class PostsController : Controller
         return Ok(); 
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetComents(int postId)
+    {
+        var coments = await _context.Coments.Where(coment=>coment.PostId==postId).ToListAsync();
+        var users = await _context.Users.ToListAsync();
+        List<ComentViewModel> comentsToShow = coments.Select(coment => new ComentViewModel
+        {
+           Id = coment.Id,
+           Text= coment.Text,
+           PostId= coment.PostId,
+           CanChange=coment.CreateAt.AddMinutes(15)>DateTime.Now,
+           AuthorId= coment.AuthorId,
+           AuthorName=users.FirstOrDefault(user=>user.Id==coment.AuthorId).Name,
+           AuthorAvatar = users.FirstOrDefault(user => user.Id == coment.AuthorId).Avatar
+        }).ToList();
+        return Json(comentsToShow);
+    }
 
+    [HttpPost]
+    public async Task<IActionResult> MakeComent(string text,int postId)
+    {
+        Console.WriteLine("sdfasdasda");
+        if (HttpContext.User == null)
+        {
+            return Unauthorized();
+        }
+
+        int clientId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
+        Coments newComent = new Coments()
+        {
+            Id= _context.Coments.Count(),
+            AuthorId = clientId,
+            Text= text,
+            PostId= postId,
+            CreateAt = DateTime.Now
+        };
+
+       _context.Coments.Add(newComent);
+        await _context.SaveChangesAsync();
+
+        return Ok();
+    }
 
 }

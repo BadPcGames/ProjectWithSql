@@ -65,13 +65,83 @@
             <button id="dislike-button">👎 Dislike</button>
             <span id="dislike-count">0</span>
         </div>
+
+        <h1>Комментарии</h1>
+
+        <div id="comments-container"></div>
+
+        <div>
+            <h3>Оставить комментарий:</h3>
+            <textarea id="comment-text" placeholder="Ваш комментарий"></textarea><br>
+            <button id="submit-comment">Отправить комментарий</button>
+        </div>
+
+
     </div>
 
 
 </body>
 
 <script>
-    const postId = @Model.Id; 
+    const postId = @Model.Id;
+
+    function makeComent(text) {
+        $.ajax({
+            url: '@Url.Action("MakeComent", "Posts")',
+            method: 'POST',
+            data: { text: text, postId: postId }, 
+            success: function () {
+                $('#comment-text').val("");  
+                loadComments(postId); 
+            },
+            error: function (xhr, status, error) {
+                alert('Ошибка при отправке комментария');
+            }
+        });
+    }
+
+    $('#submit-comment').click(function () {
+        const text = $('#comment-text').val().trim(); 
+
+        if (text === "") {
+            alert("Комментарий не может быть пустым!");
+            return;
+        }
+
+        makeComent(text); 
+    });
+
+
+
+    $(document).ready(function () {
+        loadComments(postId);
+    });
+
+    function loadComments(postId) {
+        $.ajax({
+            url: '@Url.Action("GetComents", "Posts")',
+            method: 'GET',
+            data: { postId: postId },
+            success: function (comments) {
+                $('#comments-container').empty();
+                comments.forEach(comment => {
+                    let canChangeText = comment.canChange ? "Можно изменить" : "Невозможно изменить";
+                    let commentHtml = `
+                                    <div class="comment">
+                                        <p><strong>${comment.authorName}</strong> (${canChangeText}):</p>
+                                        <p>${comment.text}</p>
+                                            <img src="data:image/png;base64,${comment.authorAvatar}" alt="Avatar" width="50" height="50">
+                                    </div>
+                                    <hr>
+                                `;
+                    $('#comments-container').append(commentHtml);
+                });
+            },
+            error: function () {
+                alert('Ошибка загрузки комментариев');
+            }
+        });
+    }
 
     function updateReactions() {
         $.ajax({
@@ -107,8 +177,6 @@
             }
         });
     }
-
-
 
     $('#like-button').click(function () {
         makeReaction(1);

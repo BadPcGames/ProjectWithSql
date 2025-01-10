@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\dbmodels\\coments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\coments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\views\\posts\\readpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\posts\\readpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\readpost.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\blogs\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,77 +46,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Blog.cs",
-              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Blog.cs",
-              "RelativeToolTip": "WebApplication1\\DbModels\\Blog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T10:56:22.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\Create.cshtml",
-              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Posts\\Create.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADQAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T10:00:46.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "RelativeDocumentMoniker": "WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "RelativeToolTip": "WebApplication1\\Views\\Blogs\\Create.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACEAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T09:37:58.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHAAAAAPAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFkAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T09:30:48.744Z"
+              "WhenOpened": "2025-01-10T14:19:18.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAFkAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-10T14:18:44.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Coments.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Coments.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Coments.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Coments.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\Coments.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T14:13:20.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ReadPost.cshtml",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\ReadPost.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Posts\\ReadPost.cshtml",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Posts\\ReadPost.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Posts\\ReadPost.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEIAAAAOAAAA",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-10T09:27:49.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlogsController.cs",
-              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BlogsController.cs",
-              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\BlogsController.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAcwHgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T09:01:09.548Z",
+              "WhenOpened": "2025-01-10T13:36:30.062Z",
               "EditorCaption": ""
             },
             {
@@ -135,9 +102,9 @@
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PostsController.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\PostsController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\PostsController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAA9wAQAAAAdAAAA",
+              "ViewState": "AQIAANMAAAAAAAAAAAAiwOkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T08:46:29.35Z",
+              "WhenOpened": "2025-01-10T13:17:15.221Z",
               "EditorCaption": ""
             }
           ]
