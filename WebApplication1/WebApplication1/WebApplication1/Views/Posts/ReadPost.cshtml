@@ -22,8 +22,8 @@
         }
     </style>
 </head>
-
-<h1>@Model.Title</h1>
+<body>
+    <h1>@Model.Title</h1>
 
 
     <div class="posts">
@@ -31,11 +31,11 @@
 
         @foreach (var content in Model.Contents)
         {
- 
+
             if (content.ContentType == "Image")
             {
                 var base64Image = Convert.ToBase64String(content.Content);
-                var imageSrc = $"data:image/png;base64,{base64Image}"; 
+                var imageSrc = $"data:image/png;base64,{base64Image}";
                 <div>
                     <img src="@imageSrc" alt="Image" class="img-fluid" />
                 </div>
@@ -58,7 +58,67 @@
                 </div>
             }
         }
+        <div id="reactions">
+            <button id="like-button">👍 Like</button>
+            <span id="like-count">0</span>
+
+            <button id="dislike-button">👎 Dislike</button>
+            <span id="dislike-count">0</span>
+        </div>
     </div>
+
+
+</body>
+
+<script>
+    const postId = @Model.Id; 
+
+    function updateReactions() {
+        $.ajax({
+            url: '@Url.Action("GetLikes", "Posts")',
+            method: 'GET',
+            data: { postId: postId }, 
+            success: function (data) {
+                $('#like-count').text(data);
+            }
+        });
+
+        $.ajax({
+            url: '@Url.Action("GetDisLikes", "Posts")',
+            method: 'GET',
+            data: { postId: postId }, 
+            success: function (data) {
+                $('#dislike-count').text(data);
+            }
+        });
+    }
+
+    function makeReaction(value) {
+        $.ajax({
+            url: '@Url.Action("MakeReactions", "Posts")',
+            method: 'POST',
+            data: { value:value, postId: postId },
+            success: function () {
+                updateReactions();
+            },
+            error: function (xhr) {
+                console.error(xhr.responseText); 
+                alert('Error setting reaction.');
+            }
+        });
+    }
+
+
+
+    $('#like-button').click(function () {
+        makeReaction(1);
+    });
+
+    $('#dislike-button').click(function () {
+        makeReaction(-1);
+    });
+    updateReactions();
+</script>
 
 
 

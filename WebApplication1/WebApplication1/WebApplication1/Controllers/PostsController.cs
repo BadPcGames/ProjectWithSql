@@ -5,7 +5,6 @@ using WebApplication1.DbModels;
 using WebApplication1.Models;
 using System.Text;
 using WebApplication1.Services;
-using WebApplication1.Controllers;
 using System.Security.Claims;
 
 public class PostsController : Controller
@@ -153,14 +152,76 @@ public class PostsController : Controller
         return RedirectToAction("Index", new { id = blogId });
     }
 
-
-
     [HttpGet]
     public async Task<IActionResult> GetGames()
     {
         var games = await _context.Games.ToListAsync();
         return Json(games);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetLikes(int postId)
+    {
+        int likeCount = await _context.Reactions
+                                      .Where(like => like.PostId == postId && like.Value > 0)
+                                      .CountAsync();
+        return Ok(likeCount);
+    }
+
+
+    [HttpGet]
+    public async Task<IActionResult> GetDisLikes(int postId)
+    {
+        int likeCount = await _context.Reactions
+                                      .Where(like => like.PostId == postId && like.Value < 0)
+                                      .CountAsync();
+        return Ok(likeCount);
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> MakeReactions(int value, int postId)
+    {
+        if (HttpContext.User == null)
+        {
+            return Unauthorized(); 
+        }
+
+        int clientId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
+
+        Reactions? existingReaction = _context.Reactions
+                                              .FirstOrDefault(reaction => reaction.AuthorId == clientId && reaction.PostId == postId);
+
+        if (existingReaction == null)
+        {
+            Reactions reactions = new Reactions()
+            {
+                Value = value,
+                AuthorId = clientId,
+                PostId = postId
+            };
+
+            _context.Add(reactions);
+            await _context.SaveChangesAsync();
+        }
+        else
+        {
+            if (existingReaction.Value != value)
+            {
+                existingReaction.Value = value;
+                _context.Update(existingReaction);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                _context.Reactions.Remove(existingReaction);
+                await _context.SaveChangesAsync();
+            }
+        }
+
+        return Ok(); 
+    }
+
 
 
 }
