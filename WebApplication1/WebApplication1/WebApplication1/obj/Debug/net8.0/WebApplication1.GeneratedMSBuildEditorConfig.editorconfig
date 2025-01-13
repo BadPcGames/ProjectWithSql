@@ -18,16 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\git\ProjectWithSql\WebApplication1\WebApplication1\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Blogs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Blogs/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Blogs/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Home/Index.cshtml]
@@ -44,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Posts/ReadPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcUmVhZFBvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Profile/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Shared/Error.cshtml]

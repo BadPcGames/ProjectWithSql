@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using WebApplication1.DbModels;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
@@ -18,6 +19,30 @@ namespace WebApplication1.Controllers
         {
             var blogs = await _context.Blogs.ToListAsync();
             var users = await _context.Users.ToListAsync();
+            var posts = await _context.Posts.ToListAsync();
+            var postContent = await _context.Post_Contents.ToListAsync();
+
+            List<PostViewModel> postsToShow = posts.Select(post =>new PostViewModel
+            {
+                Id=post.Id,
+                Title=post.Title,
+                CreateAt=post.CreatedAt,
+                Game=post.Game,
+                BlogId=post.BlogId,
+                BlogName=blogs.FirstOrDefault(blog=>blog.Id==post.BlogId).Name??"Unknow",
+                AuthorName = users.FirstOrDefault(user => user.Id == blogs.First(blog => blog.Id == post.BlogId).AuthorId)?.Name ?? "Unknown",
+                Contents=postContent.Where(postContents=> postContents.PostId==post.Id).ToList()
+                
+            }).ToList();
+
+            return View(postsToShow);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetBlogs()
+        {
+            var blogs = await _context.Blogs.ToListAsync();
+            var users = await _context.Users.ToListAsync();
 
             var blogsWithAuthors = blogs.Select(blog => new BlogViewModel
             {
@@ -28,8 +53,9 @@ namespace WebApplication1.Controllers
                 AuthorName = users.FirstOrDefault(user => user.Id == blog.AuthorId)?.Name ?? "Unknown"
             }).ToList();
 
-            return View(blogsWithAuthors);
+            return Json(blogsWithAuthors);
         }
+
 
         public IActionResult Privacy()
         {

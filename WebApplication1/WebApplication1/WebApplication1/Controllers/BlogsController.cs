@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication1;
 using System.Diagnostics;
 using WebApplication1.DbModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 public class BlogsController : Controller
 {
@@ -11,12 +13,6 @@ public class BlogsController : Controller
     public BlogsController(AppDbContext context)
     {
         _context = context;
-    }
-
-    // GET: Blogs
-    public async Task<IActionResult> Index()
-    {
-        return View(await _context.Blogs.ToListAsync());
     }
 
     // GET: Blogs/Create
@@ -32,11 +28,10 @@ public class BlogsController : Controller
     {
         if (ModelState.IsValid)
         {
-            // TODO: поменять на другой автор айди
-            blog.AuthorId = 1;
+            blog.AuthorId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
             _context.Add(blog);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Profile");
         }
         return View(blog);
     }
@@ -95,7 +90,7 @@ public class BlogsController : Controller
                     throw;
                 }
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Profile");
         }
         return View(blog);
     }
@@ -119,14 +114,19 @@ public class BlogsController : Controller
         {
             var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
             _context.Post_Contents.RemoveRange(contentsToDelete);
+            var reactionsToDelete = _context.Reactions.Where(m => m.PostId == post.Id);
+            _context.Reactions.RemoveRange(reactionsToDelete);
+            var comentsToDelete = _context.Coments.Where(m => m.PostId == post.Id);
+            _context.Coments.RemoveRange(comentsToDelete);
             _context.Posts.Remove(post);
+            await _context.SaveChangesAsync();
         }
 
         _context.Blogs.Remove(blog);
 
         await _context.SaveChangesAsync();
 
-        return RedirectToAction(nameof(Index));
+        return RedirectToAction("Index","Profile");
     }
 
 

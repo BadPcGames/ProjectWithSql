@@ -11,6 +11,9 @@ public class AppDbContext : DbContext
     public DbSet<Game> Games { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<Post_Content> Post_Contents { get; set; }
+    public DbSet<Coments> Coments { get; set; }
+    public DbSet<Reactions> Reactions { get; set; }
+
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {

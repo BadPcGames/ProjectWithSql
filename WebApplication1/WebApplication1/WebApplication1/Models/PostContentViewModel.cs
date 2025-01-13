@@ -2,7 +2,7 @@
 
 namespace WebApplication1.Models
 {
-    public class Post_ContentViewModel
+    public class PostContentViewModel
     {
         public int Id { get; set; }
         public int PostId { get; set; }

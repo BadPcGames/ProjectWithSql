@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\images\\image-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\image-removebg-preview.png"
+    },
+    {
+      "Id": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\images\\images.png",
+      "PackagePath": "staticwebassets\\images\\images.png"
+    },
+    {
       "Id": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
