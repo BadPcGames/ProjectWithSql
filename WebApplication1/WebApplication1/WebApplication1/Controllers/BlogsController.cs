@@ -119,6 +119,7 @@ public class BlogsController : Controller
             var comentsToDelete = _context.Coments.Where(m => m.PostId == post.Id);
             _context.Coments.RemoveRange(comentsToDelete);
             _context.Posts.Remove(post);
+            await _context.SaveChangesAsync();
         }
 
         _context.Blogs.Remove(blog);

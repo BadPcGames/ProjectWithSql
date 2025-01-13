@@ -7,11 +7,12 @@ namespace WebApplication1.Services
 {
     public class MyConvert
     {
-        public static  byte[] ConvertFileToByteArray(IFormFile file)
+        public  static  byte[] ConvertFileToByteArray(IFormFile file)
         {
-            using var memoryStream = new MemoryStream();
-            file.CopyToAsync(memoryStream);
-            return memoryStream.ToArray();
+            using var fileStream = file.OpenReadStream();
+            byte[] bytes = new byte[file.Length];
+            fileStream.Read(bytes, 0, (int)file.Length);
+            return bytes;
         }
     }
 }

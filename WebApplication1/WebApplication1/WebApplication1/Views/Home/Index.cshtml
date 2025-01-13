@@ -96,13 +96,16 @@
                             {
                                 var base64Video = Convert.ToBase64String(item.Contents[0].Content);
                                 var videoSrc = $"data:video/mp4;base64,{base64Video}";
-                                <div>
+                                <video width="320" height="240" controls>
+                                    <source src="@videoSrc" type="video/mp4">
+                                </video>
+                                @* <div>
                                     <div>
                                         <div class="embed-responsive embed-responsive-16by9">
                                             <iframe class="embed-responsive-item" src="@videoSrc"></iframe>
                                         </div>
                                     </div>
-                                </div>
+                                </div> *@
                             }
                             else
                             {

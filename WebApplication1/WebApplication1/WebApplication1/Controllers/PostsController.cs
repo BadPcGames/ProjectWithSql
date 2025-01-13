@@ -117,16 +117,14 @@ public class PostsController : Controller
                     Content = contentData,
                     Position = content.Position
                 });
-            }
-
-            await _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+            } 
         }
 
         return RedirectToAction("Index", new { id = blogId });
     }
 
     // POST: Posts/Dlete/5
-    [HttpPost]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)
@@ -142,14 +140,13 @@ public class PostsController : Controller
 
         int blogId = post.BlogId;
 
-        var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == post.Id);
+        var contentsToDelete = _context.Post_Contents.Where(m => m.PostId == id);
         _context.Post_Contents.RemoveRange(contentsToDelete);
-        var reactionsToDelete = _context.Reactions.Where(m => m.PostId == post.Id);
+        var reactionsToDelete = _context.Reactions.Where(m => m.PostId == id);
         _context.Reactions.RemoveRange(reactionsToDelete);
-        var comentsToDelete = _context.Coments.Where(m => m.PostId == post.Id);
+        var comentsToDelete = _context.Coments.Where(m => m.PostId == id);
         _context.Coments.RemoveRange(comentsToDelete);
         _context.Posts.Remove(post);
-        
         await _context.SaveChangesAsync();
 
         return RedirectToAction("Index", new { id = blogId });
@@ -255,7 +252,6 @@ public class PostsController : Controller
         int clientId = int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value);
         Coments newComent = new Coments()
         {
-            Id= _context.Coments.Count(),
             AuthorId = clientId,
             Text= text,
             PostId= postId,
