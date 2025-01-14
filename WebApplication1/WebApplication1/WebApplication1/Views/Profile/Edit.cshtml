@@ -1,38 +1,17 @@
 ﻿@using WebApplication1.DbModels
-@model Blog
+@model User
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<h1>Blog redactor</h1>
+<h1>Profile redactor @Model.Name</h1>
 
-<table class="table">
 
-    <form asp-action="Edit" method="post">
-        <h1>Name</h1>
-        <input type="text" name="Name" value="@Model.Name" />
-        <h1>Description</h1>
-        <input type="text" name="Description" value="@Model.Description" />
-        <h1>Theme</h1>
-        <select id="themeSelect" name="theme">
-            <option value=@Model.Theme>@Model.Theme</option>
-        </select>
-        <input type="submit"/>
-        </form>
-</table>
-
-<script>
-    $.ajax({
-        url: '@Url.Action("GetThemes", "Blogs")', 
-        method: 'GET',
-        success: function (data) {
-            console.log(data); 
-            data.forEach(function (theme) {
-                $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
-            });
-        },
-        error: function (error) {
-            console.log("Ошибка при загрузке тем: ", error);
-        }
-    });
-</script>
-
+<form asp-controller="Auth" asp-action="EditProfileData" method="post">
+    <h1>New Name(if you want)</h1>
+    <input type="text" name="Name" value="@Model.Name" />
+    <h1>New Email(if you want)</h1>
+    <input type="text" name="Email" value="@Model.Email" />
+    <h1>New Password(if you want)</h1>
+    <input type="password" name="Password" value="" />
+    <input type="submit" />
+</form>

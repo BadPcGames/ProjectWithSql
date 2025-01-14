@@ -22,6 +22,7 @@ public class BlogsController : Controller
     }
 
     // POST: Blogs/Create
+    [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create([Bind("Id,Name,Description,Theme,AuthorId")] Blog blog)
@@ -37,6 +38,7 @@ public class BlogsController : Controller
     }
 
     // GET: Blogs/Edit/5
+    [Authorize]
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null || _context.Blogs == null)
@@ -45,6 +47,10 @@ public class BlogsController : Controller
         }
 
         var blog = await _context.Blogs.FindAsync(id);
+        if(blog.AuthorId != int.Parse(HttpContext.User.FindFirst(ClaimTypes.System)?.Value))
+        {
+            return RedirectToAction("Index", "Profile");
+        }
         if (blog == null)
         {
             return NotFound();
@@ -53,6 +59,7 @@ public class BlogsController : Controller
     }
 
     // POST: Blogs/Edit/5
+    [Authorize]
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Theme")] Blog blog)
@@ -96,6 +103,7 @@ public class BlogsController : Controller
     }
 
     // GET: Blogs/Delete/5
+    [Authorize]
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null)

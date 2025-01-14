@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -55,13 +56,12 @@ namespace WebApplication1.Controllers
                         Password = model.Password
                     });
                 }
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Profile");
             }
             else
             {
                 return RedirectToAction("Index");
             }
-  
         }
 
         [HttpPost]
@@ -83,7 +83,7 @@ namespace WebApplication1.Controllers
 
             await SingIn(user);
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Profile");
 
         }
 
@@ -101,6 +101,32 @@ namespace WebApplication1.Controllers
             var claimsPrincipal = new ClaimsPrincipal(claimsIdentyti);
             await HttpContext.SignInAsync(claimsPrincipal);
         }
+
+        [Authorize]
+        public async Task<IActionResult> EditProfileData(string? Name, string? Email, string? Password)
+        {
+            var user = _context.Users.First(user => user.Id == int.Parse(HttpContext.User.FindFirst(ClaimTypes.System).Value));
+
+            if (Name != null)
+            {
+                user.Name = Name;
+            }
+            if (Email != null)
+            {
+                user.Email = Email;
+            }
+            if (Password != null)
+            {
+                user.PasswordHash = ShifrService.HashPassword(Password);
+            }
+            _context.Update(user);
+            await _context.SaveChangesAsync();
+
+            SingIn(user);
+
+            return RedirectToAction("Index", "Profile");
+        }
+
 
         public async Task<IActionResult> SingOut()
         {
