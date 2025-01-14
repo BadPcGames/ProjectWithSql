@@ -73,56 +73,13 @@
 
     <div class="container" style="margin-top:10px">
         <div class="row">
+            <div class="col-sm-2 col-md-3"></div>
+            <div class="col-sm-4 col-md-6">
+                <div class="content" id="postsContainer">
 
-            @foreach (var item in Model)
-            {
-                <div class="col-sm-2 col-md-3"></div>
-                <div class="col-sm-4 col-md-6  post">
-                    <div class="content">
-                        <h2 class="text-black text-center">
-                            <a asp-controller="Posts" asp-action="ReadPost" asp-route-id="@item.Id">@item.Title</a>
-                        </h2>
-                        @if (item.Contents.Count >= 1)
-                        {
-                            if (item.Contents[0].ContentType == "Image")
-                            {
-                                var base64Image = Convert.ToBase64String(item.Contents[0].Content);
-                                var imageSrc = $"data:image/png;base64,{base64Image}";
-                                <div>
-                                    <img src="@imageSrc" alt="Image" class="img-fluid" />
-                                </div>
-                            }
-                            else if (item.Contents[0].ContentType == "Video")
-                            {
-                                var base64Video = Convert.ToBase64String(item.Contents[0].Content);
-                                var videoSrc = $"data:video/mp4;base64,{base64Video}";
-                                <video width="320" height="240" controls>
-                                    <source src="@videoSrc" type="video/mp4">
-                                </video>
-                                @* <div>
-                                    <div>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" src="@videoSrc"></iframe>
-                                        </div>
-                                    </div>
-                                </div> *@
-                            }
-                            else
-                            {
-                                var textContent = System.Text.Encoding.UTF8.GetString(item.Contents[0].Content);
-                                <div>
-                                    <p>@textContent</p>
-                                </div>
-                            }
-                        }
-                        <br>
-                        <p>
-                            @item.AuthorName
-                        </p>
-                    </div>
                 </div>
-                <br>
-            }
+            </div>
+            <div class="col-sm-2 col-md-3"></div>
         </div>
     </div>
 
@@ -137,8 +94,20 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
+           
+
         <div class="offcanvas-body bg-dark bg-opacity-25">
             <p>Try scrolling the rest of the page to see this option in action.</p>
+            <h1>Filter Posts</h1>
+            <h1>Theme</h1>
+            <select id="themeSelect" name="theme">
+                <option value="">Оберіть тему...</option>
+            </select>
+            <h2>Гра</h2>
+            <select id="gameSelect" name="Game" >
+                <option value="">Оберіть гру...</option>
+            </select>
+            <button id="applyFilters">Apply Filters</button>
         </div>
 
         <div class="personImage bg-dark bg-opacity-50">
@@ -165,6 +134,102 @@
     </div>
 
 </body>
+
+<script>
+    $.ajax({
+        url: '@Url.Action("GetThemes", "Blogs")',
+        method: 'GET',
+        success: function (data) {
+            console.log(data);
+            data.forEach(function (theme) {
+                $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
+            });
+        },
+        error: function (error) {
+            console.log("Ошибка при загрузке тем: ", error);
+        }
+    });
+
+    $(document).ready(function () {
+        $.ajax({
+            url: '@Url.Action("GetGames", "Posts")',
+            method: 'GET',
+            success: function (games) {
+                games.forEach(function (game) {
+                    $("#gameSelect").append(`<option value="${game.gameName}">${game.gameName}</option>`);
+                });
+            },
+            error: function () {
+                console.error("Не удалось загрузить список игр.");
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        function loadPosts() {
+            const filterGame = $('#gameSelect').val();
+            const filterTheme = $('#themeSelect').val();
+
+            $.ajax({
+                url: '@Url.Action("GetPosts", "Home")', // Ensure this is the correct URL in your project
+                method: 'GET',
+                dataType: 'json',
+                data: {
+                    filterGame: filterGame,
+                    filterTheme: filterTheme
+                },
+                success: function (posts) {
+                    const container = document.getElementById('postsContainer');
+                    if (posts.length === 0) {
+                        container.innerHTML = '<p>No posts found.</p>';
+                    } else {
+                        let htmlContent = '';
+                        posts.forEach(post => {
+                            let postContent = '';
+                            if (post.contents.length > 0) {
+                                const firstContent = post.contents[0];
+                                if (firstContent.contentType === 'Image') {
+                                    postContent = `<div><img src="data:image/png;base64,${firstContent.content}" alt="Image" class="img-fluid"></div>`;
+                                } else if (firstContent.contentType === 'Video') {
+                                    postContent = `<video width="320" height="240" controls>
+                                                    <source src="data:video/mp4;base64,${firstContent.content}" type="video/mp4">
+                                            </video>`;
+                                } else if (firstContent.contentType === 'Text') {
+                                    // Decode base64 content into text
+                                    const byteArray = Uint8Array.from(atob(firstContent.content), c => c.charCodeAt(0));
+                                    const decoder = new TextDecoder("utf-8");
+                                    const text = decoder.decode(byteArray);
+                                    postContent = `<div><p>${text}</p></div>`;
+                                }
+                            }
+                            htmlContent += `
+                                        <div class="content post">
+                                            <h2 class="text-black text-center">
+                                                <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
+                                            </h2>
+                                            ${postContent}
+                                            <br>
+                                            <p>Author: ${post.authorName}</p>
+                                        </div>
+                                        <br>
+                                    `;
+                        });
+                        container.innerHTML = htmlContent;
+                    }
+                },
+                error: function () {
+                    alert('Error loading posts.');
+                }
+            });
+        }
+
+        $('#applyFilters').click(loadPosts);
+
+        loadPosts();
+    });
+</script>
 
 
 
