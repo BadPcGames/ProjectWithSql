@@ -50,19 +50,25 @@
 
     <script>
         $.ajax({
-            url: '@Url.Action("GetUserId", "Auth")',
+            url: '@Url.Action("GetUserRole", "Auth")',
             method: 'GET',
             success: function (data) {
                 const elements = document.getElementsByClassName('dropdown-menu');
                 if (elements.length > 0) {
                     const element = elements[0];
                     if (data != null) {
-                        element.innerHTML =`
-                            <li><a class="nav-link text-dark" href = "/Profile/Index" > Your profile </a></li >
-                                <li><a class="nav-link text-dark" href = "/Auth/SingOut" > Log Out </a></li >
-                             `;
-
-                         console.log(data);
+                        let htmlElments = `
+                                <li><a class="nav-link text-dark" href = "/Profile/Index" > Your profile </a></li >
+                                    <li><a class="nav-link text-dark" href = "/Auth/SingOut" > Log Out </a></li >
+                                 `;
+                        console.log(data);
+                        if (data == "Moder" || data == "Admin") {
+                            htmlElments +=`<li> <a class="nav-link text-dark" href = "/Profile/Index" > Moder </a></li>`
+                        }
+                        if (data == "Admin") {
+                            htmlElments += `<li> <a class="nav-link text-dark" href = "/Admin/Index" > Admin </a></li>`
+                        }
+                        element.innerHTML = htmlElments;
                     } else {
                         element.innerHTML = '<a class="nav-link text-dark" href="/Auth/Index">Login / Reg</a>';
                         console.log("не авторизованый");
@@ -87,9 +93,8 @@
                     const element = elements[0];
                     if (data != null) {
                         element.innerHTML = element.innerHTML = `
-            <img style="width:40px" class="rounded-circle" src="data:image/png;base64,${data}" onerror="console.error('Ошибка загрузки изображения')">
-        `;
-                        console.log(data);
+                            <img style="width:40px" class="rounded-circle" src="data:image/png;base64,${data}" onerror="console.error('Ошибка загрузки изображения')">
+                        `;
                     } 
                 } else {
                     element.innerHTML = element.innerHTML = `

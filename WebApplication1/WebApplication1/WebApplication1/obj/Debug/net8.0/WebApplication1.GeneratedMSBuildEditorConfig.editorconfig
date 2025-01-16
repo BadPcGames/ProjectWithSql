@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\git\ProjectWithSql\WebApplication1\WebApplication1\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Auth/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Blogs/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Game/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Game/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Game/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/git/ProjectWithSql/WebApplication1/WebApplication1/WebApplication1/Views/Home/Index.cshtml]

@@ -144,6 +144,15 @@ namespace WebApplication1.Controllers
             return null; 
         }
 
+        public string? GetUserRole()
+        {
+            if (GetUserId != null)
+            {
+                return HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
+            }
+            return null;
+        }
+
         public byte[]? GetUserAvatar()
         {
             if (GetUserId() != null)

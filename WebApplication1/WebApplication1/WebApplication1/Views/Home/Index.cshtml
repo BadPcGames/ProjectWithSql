@@ -14,7 +14,7 @@
 
     <style>
         body {
-            background-image: url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/10/soulsborne-games.jpg');
+            background-image: src:"../../wwwroot/images/vgkcb6t7xfrb1.jpg";
             background-size: cover; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
@@ -56,7 +56,7 @@
     </style>
 
 </head>
-<body>
+<body >
 
     <div class="container-fluid">
         <div class="d-flex justify-content-between align-items-center position-absolute start-0 end-0 p-3">
@@ -140,7 +140,6 @@
         url: '@Url.Action("GetThemes", "Blogs")',
         method: 'GET',
         success: function (data) {
-            console.log(data);
             data.forEach(function (theme) {
                 $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
             });
@@ -173,7 +172,7 @@
             const filterTheme = $('#themeSelect').val();
 
             $.ajax({
-                url: '@Url.Action("GetPosts", "Home")', // Ensure this is the correct URL in your project
+                url: '@Url.Action("GetPosts", "Posts")', 
                 method: 'GET',
                 dataType: 'json',
                 data: {
@@ -197,7 +196,6 @@
                                                     <source src="data:video/mp4;base64,${firstContent.content}" type="video/mp4">
                                             </video>`;
                                 } else if (firstContent.contentType === 'Text') {
-                                    // Decode base64 content into text
                                     const byteArray = Uint8Array.from(atob(firstContent.content), c => c.charCodeAt(0));
                                     const decoder = new TextDecoder("utf-8");
                                     const text = decoder.decode(byteArray);
@@ -205,13 +203,15 @@
                                 }
                             }
                             htmlContent += `
-                                        <div class="content post">
-                                            <h2 class="text-black text-center">
-                                                <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
-                                            </h2>
-                                            ${postContent}
-                                            <br>
-                                            <p>Author: ${post.authorName}</p>
+                                        <div class="post">
+                                            <div class="content">
+                                                <h2 class="text-black text-center">
+                                                    <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
+                                                </h2>
+                                                ${postContent}
+                                                <br>
+                                                <p>Author: ${post.authorName}</p>
+                                            </div>
                                         </div>
                                         <br>
                                     `;

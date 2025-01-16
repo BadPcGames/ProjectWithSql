@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\images.png"
     },
     {
+      "Id": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\images\\vgkcb6t7xfrb1.jpg",
+      "PackagePath": "staticwebassets\\images\\vgkcb6t7xfrb1.jpg"
+    },
+    {
       "Id": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

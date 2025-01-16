@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h02IxbJcLE74ZzQ7ZyHUlbtf1FsSH6rpxOYQWkNsA+4=",
+  "Hash": "Yiuzc3xLBh9CbLZSxU8n37MsnJC2WOxbEUFNzKEoi1U=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\images.png"
+    },
+    {
+      "Identity": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\images\\vgkcb6t7xfrb1.jpg",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "images/vgkcb6t7xfrb1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\vgkcb6t7xfrb1.jpg"
     },
     {
       "Identity": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",

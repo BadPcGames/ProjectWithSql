@@ -33,7 +33,6 @@
         url: '@Url.Action("GetThemes", "Blogs")', 
         method: 'GET',
         success: function (data) {
-            console.log(data); 
             data.forEach(function (theme) {
                 $("#themeSelect").append(`<option value="${theme.name}">${theme.name}</option>`);
             });

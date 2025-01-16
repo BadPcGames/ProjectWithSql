@@ -5,6 +5,7 @@ using System.Diagnostics;
 using WebApplication1.DbModels;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using WebApplication1.Models;
 
 public class BlogsController : Controller
 {
@@ -137,6 +138,23 @@ public class BlogsController : Controller
         return RedirectToAction("Index","Profile");
     }
 
+    [HttpGet]
+    public async Task<IActionResult> GetBlogs()
+    {
+        var blogs = await _context.Blogs.ToListAsync();
+        var users = await _context.Users.ToListAsync();
+
+        var blogsWithAuthors = blogs.Select(blog => new BlogViewModel
+        {
+            Id = blog.Id,
+            Name = blog.Name,
+            Description = blog.Description,
+            Theme = blog.Theme,
+            AuthorName = users.FirstOrDefault(user => user.Id == blog.AuthorId)?.Name ?? "Unknown"
+        }).ToList();
+
+        return Json(blogsWithAuthors);
+    }
 
     private bool BlogExists(int id)
     {

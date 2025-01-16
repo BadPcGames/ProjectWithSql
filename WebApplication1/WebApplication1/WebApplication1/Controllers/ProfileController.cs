@@ -54,7 +54,7 @@ namespace WebApplication1.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> ChangeAvatar(IFormFile Avatar)
+        public async Task<IActionResult> ChangeAvatar(IFormFile? Avatar)
         {
             var user = _context.Users.First(user => user.Id == int.Parse(HttpContext.User.FindFirst(ClaimTypes.System).Value));
             byte[] avatar = Avatar != null ? MyConvert.ConvertFileToByteArray(Avatar) : null;

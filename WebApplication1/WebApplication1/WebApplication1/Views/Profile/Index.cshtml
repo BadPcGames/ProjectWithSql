@@ -31,35 +31,44 @@
             Your data
         </h1>
         <div>
-            <form asp-controller="Profile" asp-action="ChangeAvatar" method="post" enctype="multipart/form-data">
+            <form id="avatarForm" asp-controller="Profile" asp-action="ChangeAvatar" method="post" enctype="multipart/form-data">
 
                 @{
                     var base64Image = Convert.ToBase64String(ViewBag.User.Avatar);
                     var imageSrc = $"data:image/png;base64,{base64Image}";
-                    <div>
-                        <img id="image"  src="@imageSrc" alt="Image" alt="Click to select a file" class="img-fluid" />
-                    </div>
                 }
+                <div>
+                    <img id="image" src="@imageSrc" alt="Click to select a file" class="img-fluid" />
+                </div>
 
                 <input type="file" id="fileInput" name="Avatar" accept="image/*">
-                <input type="submit" value="submit" />
+                <input type="submit" value="Submit">
             </form>
+
             <script>
                 const image = document.getElementById('image');
                 const fileInput = document.getElementById('fileInput');
+                const form = document.getElementById('avatarForm');
 
                 image.addEventListener('click', () => {
                     fileInput.click();
                 });
+
                 fileInput.addEventListener('change', (event) => {
                     const file = event.target.files[0];
                     if (file) {
                         const reader = new FileReader();
                         reader.onload = (e) => {
-
                             image.src = e.target.result;
                         };
                         reader.readAsDataURL(file);
+                    }
+                });
+
+                form.addEventListener('submit', (event) => {
+                    if (!fileInput.value) {
+                        event.preventDefault();
+                        alert('Please select a file before submitting the form.');
                     }
                 });
             </script>
