@@ -11,6 +11,26 @@
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\controllers\\modercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\modercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|d:\\git\\projectwithsql\\webapplication1\\webapplication1\\webapplication1\\dbmodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\dbmodels\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\webapplication1\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5347B78-3E66-44BF-BB34-39E2E6CDCEF4}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,6 +71,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BlogsController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\BlogsController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\BlogsController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\BlogsController.cs",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:21:10.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:19:15.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Post.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\Post.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\Post.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\Post.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:13:56.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GameViewModel.cs",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\GameViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\GameViewModel.cs",
@@ -62,7 +121,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "PostViewModel.cs",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Models\\PostViewModel.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Models\\PostViewModel.cs",
@@ -74,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Profile\\Index.cshtml",
@@ -92,22 +151,9 @@
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PostsController.cs",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\PostsController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\PostsController.cs",
-              "ViewState": "AQIAAAEBAAAAAAAAAADwvwAAAAAAAAAA",
+              "ViewState": "AQIAAAwBAAAAAAAAAADwvw0BAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T08:49:43.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GameController.cs",
-              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\GameController.cs",
-              "RelativeToolTip": "WebApplication1\\Controllers\\GameController.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAuwHoAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T08:49:29.433Z",
               "EditorCaption": ""
             },
             {
@@ -118,10 +164,48 @@
               "RelativeDocumentMoniker": "WebApplication1\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "WebApplication1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAHgAAAAAAAAAAAAowIgAAAAFAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-20T08:48:35.676Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModerController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\ModerController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ModerController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\ModerController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ModerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:23:52.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DbModels\\User.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\DbModels\\User.cs",
+              "RelativeToolTip": "WebApplication1\\DbModels\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:14:26.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\GameController.cs",
+              "ToolTip": "D:\\git\\ProjectWithSql\\WebApplication1\\WebApplication1\\WebApplication1\\Controllers\\GameController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\GameController.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAuwHoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T08:49:29.433Z"
             }
           ]
         },

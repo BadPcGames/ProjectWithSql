@@ -24,20 +24,24 @@
         .parallelogram {
             width: 200px;
             height: 250px;
+            position: relative;
             -webkit-transform: skew(20deg);
             -moz-transform: skew(20deg);
             -o-transform: skew(20deg);
-    
-            justify-content: center;
-            align-items: center;
+            transform: skew(20deg);
+
         }
 
         .characterImage {
-            width: 150px;
+            width: auto;
             height: 250px;
-            -webkit-transform: skew(-20deg);
-            -moz-transform: skew(-20deg);
-            -o-transform: skew(-20deg);
+            position: absolute;
+            top:50%;
+            left: 25%;
+            -webkit-transform: skew(-20deg) translate(-50%, -50%) scaleX(-1);
+            -moz-transform: skew(-20deg) translate(-50%, -50%) scaleX(-1);
+            -o-transform: skew(-20deg) translate(-50%, -50%) scaleX(-1);
+            transform: skew(-20deg) translate(-50%, -50%) scaleX(-1);
         }
 
         .personImage {
@@ -77,6 +81,7 @@
                 <div class="content" id="postsContainer">
 
                 </div>
+                <button id="loadMoreButton" style="display: none;">Загрузить ещё</button>
             </div>
             <div class="col-sm-2 col-md-3"></div>
         </div>
@@ -166,6 +171,9 @@
 
 <script>
     $(document).ready(function () {
+        let currentPage = 1;
+        const postsPerPage = 2;
+
         function loadPosts() {
             const filterGame = $('#gameSelect').val();
             const filterTheme = $('#themeSelect').val();
@@ -194,53 +202,68 @@
             }
           
 
+
             $.ajax({
-                url: '@Url.Action("GetPosts", "Posts")', 
+                url: '@Url.Action("GetPosts", "Posts")',
                 method: 'GET',
                 dataType: 'json',
                 data: {
+                    currentPage: currentPage,
+                    postsPerPage: postsPerPage,
                     filterGame: filterGame,
                     filterTheme: filterTheme
                 },
                 success: function (posts) {
                     const container = document.getElementById('postsContainer');
-                    if (posts.length === 0) {
+                    const loadMoreButton = document.getElementById('loadMoreButton');
+
+                    if (posts.length === 0 && currentPage === 1) {
                         container.innerHTML = '<p>No posts found.</p>';
-                    } else {
-                        let htmlContent = '';
-                        posts.forEach(post => {
-                            let postContent = '';
-                            if (post.contents.length > 0) {
-                                const firstContent = post.contents[0];
-                                if (firstContent.contentType === 'Image') {
-                                    postContent = `<div><img src="data:image/png;base64,${firstContent.content}" alt="Image" class="img-fluid"></div>`;
-                                } else if (firstContent.contentType === 'Video') {
-                                    postContent = `<video width="320" height="240" controls>
-                                                    <source src="data:video/mp4;base64,${firstContent.content}" type="video/mp4">
-                                            </video>`;
-                                } else if (firstContent.contentType === 'Text') {
-                                    const byteArray = Uint8Array.from(atob(firstContent.content), c => c.charCodeAt(0));
-                                    const decoder = new TextDecoder("utf-8");
-                                    const text = decoder.decode(byteArray);
-                                    postContent = `<div><p>${text}</p></div>`;
-                                }
-                            }
-                            htmlContent += `
-                                        <div class="post" style="background-color:${post.color}">
-                                            <div class="content">
-                                                <h2 class="text-black text-center">
-                                                    <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
-                                                </h2>
-                                                ${postContent}
-                                                <br>
-                                                <p>Author: ${post.authorName}</p>
-                                            </div>
-                                        </div>
-                                        <br>
-                                    `;
-                        });
-                        container.innerHTML = htmlContent;
+                        loadMoreButton.style.display = 'none';
+                        return;
                     }
+
+                    if (posts.length === 0) {
+                        loadMoreButton.style.display = 'none'; 
+                        return;
+                    }
+
+                    let htmlContent = '';
+                    posts.forEach(post => {
+                        let postContent = '';
+                        if (post.contents.length > 0) {
+                            const firstContent = post.contents[0];
+                            if (firstContent.contentType === 'Image') {
+                                postContent = `<div><img src="data:image/png;base64,${firstContent.content}" alt="Image" class="img-fluid"></div>`;
+                            } else if (firstContent.contentType === 'Video') {
+                                postContent = `<video width="320" height="240" controls>
+                                            <source src="data:video/mp4;base64,${firstContent.content}" type="video/mp4">
+                                    </video>`;
+                            } else if (firstContent.contentType === 'Text') {
+                                const byteArray = Uint8Array.from(atob(firstContent.content), c => c.charCodeAt(0));
+                                const decoder = new TextDecoder("utf-8");
+                                const text = decoder.decode(byteArray);
+                                postContent = `<div><p>${text}</p></div>`;
+                            }
+                        }
+                        htmlContent += `
+                                <div class="post" style="background-color:${post.color}">
+                                    <div class="content">
+                                        <h2 class="text-black text-center">
+                                            <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
+                                        </h2>
+                                        ${postContent}
+                                        <br>
+                                        <p>Author: ${post.authorName}</p>
+                                    </div>
+                                </div>
+                                <br>
+                            `;
+                    });
+
+                    container.innerHTML += htmlContent;
+                    currentPage++; 
+                    loadMoreButton.style.display = posts.length < postsPerPage ? 'none' : 'block';
                 },
                 error: function () {
                     alert('Error loading posts.');
@@ -248,8 +271,16 @@
             });
         }
 
-        $('#applyFilters').click(loadPosts);
-        loadPosts();
+        document.getElementById('loadMoreButton').addEventListener('click', loadPosts);
+
+        $('#applyFilters').click(applyFilter);
+        function applyFilter() {
+            const container = document.getElementById('postsContainer');
+            currentPage = 1;
+            container.innerHTML = "";
+            loadPosts();
+        }
+        applyFilter();
     });
 </script>
 

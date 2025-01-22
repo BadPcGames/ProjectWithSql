@@ -8,5 +8,6 @@
         public string PasswordHash { get; set; }
         public string Role { get; set; }
         public byte[] Avatar { get; set; }
+        public DateTime? BanTime { get; set; }
     }
 }

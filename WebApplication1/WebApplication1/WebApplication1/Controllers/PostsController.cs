@@ -7,6 +7,8 @@ using System.Text;
 using WebApplication1.Services;
 using System.Security.Claims;
 using Microsoft.Extensions.Hosting;
+using System.ComponentModel;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 public class PostsController : Controller
 {
@@ -92,6 +94,7 @@ public class PostsController : Controller
     {
         post.BlogId = blogId;
         post.CreatedAt = DateTime.Now;
+        post.Verify = false;
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
 
@@ -264,36 +267,44 @@ public class PostsController : Controller
         return Ok();
     }
 
-    public async Task<IActionResult> GetPosts(string? filterGame = null, string? filterTheme = null)
+    public async Task<IActionResult> GetPosts(int currentPage, int postsPerPage,string? filterGame = null, string? filterTheme = null)
     {
-        var blogs = await _context.Blogs.ToListAsync();
-        var users = await _context.Users.ToListAsync();
-        var posts = await _context.Posts.ToListAsync();
-        var postContent = await _context.Post_Contents.ToListAsync();
+        var query = _context.Posts.AsQueryable();
+        int skip = (currentPage - 1) * postsPerPage;
 
-        List<PostViewModel> Posts = posts.Select(post => new PostViewModel
+
+        if (!string.IsNullOrEmpty(filterGame))
+        {
+            query = query.Where(post => post.Game == filterGame);
+        }
+        if (!string.IsNullOrEmpty(filterTheme))
+        {
+            query = query.Where(post => _context.Blogs
+                .Where(blog => blog.Id == post.BlogId)
+                .Select(blog => blog.Theme)
+                .FirstOrDefault() == filterTheme);
+        }
+
+        List<Post> posts= await query
+            .OrderByDescending(post => post.CreatedAt) 
+            .Skip(skip) 
+            .Take(postsPerPage) 
+            .ToListAsync();
+
+        List<PostViewModel> postViewModels = posts.Select(post => new PostViewModel
         {
             Id = post.Id,
             Title = post.Title,
             CreateAt = post.CreatedAt,
             Game = post.Game,
-            Color=_context.Games.First(game=>game.GameName==post.Game).Color,
+            Color = _context.Games.First(game => game.GameName == post.Game).Color,
             BlogId = post.BlogId,
-            BlogName = blogs.FirstOrDefault(blog => blog.Id == post.BlogId).Name ?? "Unknow",
-            AuthorName = users.FirstOrDefault(user => user.Id == blogs.First(blog => blog.Id == post.BlogId).AuthorId)?.Name ?? "Unknown",
-            Contents = postContent.Where(postContents => postContents.PostId == post.Id).ToList()
+            BlogName = _context.Blogs.Where(blog => blog.Id == post.BlogId).Select(blog => blog.Name).FirstOrDefault() ?? "Unknown",
+            AuthorName = _context.Users.Where(user => user.Id == _context.Blogs.Where(blog => blog.Id == post.BlogId).Select(blog => blog.AuthorId).FirstOrDefault())
+                                  .Select(user => user.Name).FirstOrDefault() ?? "Unknown",
+            Contents = _context.Post_Contents.Where(postContents => postContents.PostId == post.Id).ToList()
         }).ToList();
 
-        if (filterGame != null)
-        {
-            Posts = Posts.Where(post => post.Game == filterGame).ToList();
-        }
-        if (filterTheme != null)
-        {
-            Posts = Posts.Where(post => _context.Blogs.First(blog => blog.Id == post.BlogId).Theme == filterTheme).ToList();
-        }
-
-        return Json(Posts);
+        return Json(postViewModels);
     }
-
 }
