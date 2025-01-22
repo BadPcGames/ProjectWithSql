@@ -8,6 +8,7 @@ namespace WebApplication1.Models
         public string Title { get; set; }
         public DateTime CreateAt{ get; set; }
         public string Game{ get; set; }
+        public string Color {  get; set; }
         public int BlogId { get; set; }
         public string BlogName { get; set;}
         public string AuthorName { get; set;}

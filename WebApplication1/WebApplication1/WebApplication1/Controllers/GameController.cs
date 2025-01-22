@@ -118,4 +118,32 @@ public class GameController : Controller
 
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetGame(string gameName)
+    {
+        var game = _context.Games.First(game => game.GameName == gameName);
+        GameViewModel gameData=new GameViewModel()
+        {
+            GameName=game.GameName,
+            GameCharacter=game.GameCharacter,
+            Description=game.Description,
+            Color=game.Color,
+        };
+        return Json(gameData);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetGames()
+    {
+        var games = _context.Games.ToList();
+        List<GameViewModel> gamesData = games.Select(game => new GameViewModel()
+        {
+            GameName = game.GameName,
+            GameCharacter = game.GameCharacter,
+            Description = game.Description,
+            Color = game.Color,
+        }).ToList();
+        return Json(gamesData);
+    }
 }

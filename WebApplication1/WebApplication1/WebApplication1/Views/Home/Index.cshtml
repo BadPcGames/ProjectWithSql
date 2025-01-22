@@ -27,7 +27,7 @@
             -webkit-transform: skew(20deg);
             -moz-transform: skew(20deg);
             -o-transform: skew(20deg);
-            background-color: lightgray;
+    
             justify-content: center;
             align-items: center;
         }
@@ -50,7 +50,6 @@
         .post{
             border-radius:10px;
             height:auto;
-            background-color:lightgray;
             margin:10px;
         }
     </style>
@@ -112,7 +111,7 @@
 
         <div class="personImage bg-dark bg-opacity-50">
             <div class="parallelogram">
-                <img class="characterImage"
+                <img class="characterImage" id="character"
                      src="~/images/image-removebg-preview.png">
             </div>
         </div>
@@ -171,6 +170,30 @@
             const filterGame = $('#gameSelect').val();
             const filterTheme = $('#themeSelect').val();
 
+            if (filterGame != "" & filterGame != null) {
+                $.ajax({
+                    url: '@Url.Action("GetGame", "Game")',
+                    method: 'GET',
+                    dataType: 'json',
+                    data: {
+                        gameName: filterGame
+                    },
+                    success: function (game) {
+                        $('.parallelogram').css('background-color', game.color);
+                        const character = document.getElementById('character');
+                        character.src = `data:image/png;base64,${game.gameCharacter}`;
+                    },
+                    error: function () {
+                        alert('Error loading posts.');
+                    }
+                });
+            }
+            else{
+                $('.parallelogram').css('background-color', 'lightgray');
+                character.src = '/images/image-removebg-preview.png';
+            }
+          
+
             $.ajax({
                 url: '@Url.Action("GetPosts", "Posts")', 
                 method: 'GET',
@@ -203,7 +226,7 @@
                                 }
                             }
                             htmlContent += `
-                                        <div class="post">
+                                        <div class="post" style="background-color:${post.color}">
                                             <div class="content">
                                                 <h2 class="text-black text-center">
                                                     <a href="/Posts/ReadPost/${post.id}">${post.title}</a>
@@ -226,7 +249,6 @@
         }
 
         $('#applyFilters').click(loadPosts);
-
         loadPosts();
     });
 </script>

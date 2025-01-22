@@ -277,6 +277,7 @@ public class PostsController : Controller
             Title = post.Title,
             CreateAt = post.CreatedAt,
             Game = post.Game,
+            Color=_context.Games.First(game=>game.GameName==post.Game).Color,
             BlogId = post.BlogId,
             BlogName = blogs.FirstOrDefault(blog => blog.Id == post.BlogId).Name ?? "Unknow",
             AuthorName = users.FirstOrDefault(user => user.Id == blogs.First(blog => blog.Id == post.BlogId).AuthorId)?.Name ?? "Unknown",
